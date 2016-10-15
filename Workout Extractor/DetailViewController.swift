@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HealthKit
 
 class DetailViewController: UIViewController {
 
@@ -33,7 +34,7 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    var detailItem: NSDate? {
+    var detailItem: HKWorkout? {
         didSet {
             // Update the view.
             self.configureView()
