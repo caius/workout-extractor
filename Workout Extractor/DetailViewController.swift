@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
             if let label = self.detailDescriptionLabel {
-                label.text = detail.description
+                label.text = detail.description()
             }
         }
     }
@@ -34,7 +34,7 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    var detailItem: HKWorkout? {
+    var detailItem: Workout? {
         didSet {
             // Update the view.
             self.configureView()

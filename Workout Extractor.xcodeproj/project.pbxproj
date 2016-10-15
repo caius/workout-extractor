@@ -16,6 +16,9 @@
 		09E95CF01DB222A300A798FD /* Workout_ExtractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E95CEF1DB222A300A798FD /* Workout_ExtractorTests.swift */; };
 		09E95CFB1DB222A300A798FD /* Workout_ExtractorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E95CFA1DB222A300A798FD /* Workout_ExtractorUITests.swift */; };
 		09E95D0B1DB222E700A798FD /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E95D0A1DB222E700A798FD /* HealthKit.framework */; };
+		09E95D0D1DB2321D00A798FD /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E95D0C1DB2321D00A798FD /* Workout.swift */; };
+		09E95D0E1DB2321D00A798FD /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E95D0C1DB2321D00A798FD /* Workout.swift */; };
+		09E95D101DB2336600A798FD /* WorkoutTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E95D0F1DB2336600A798FD /* WorkoutTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,8 @@
 		09E95CFC1DB222A300A798FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E95D081DB222E700A798FD /* Workout Extractor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Workout Extractor.entitlements"; sourceTree = "<group>"; };
 		09E95D0A1DB222E700A798FD /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		09E95D0C1DB2321D00A798FD /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		09E95D0F1DB2336600A798FD /* WorkoutTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +112,7 @@
 				09E95D081DB222E700A798FD /* Workout Extractor.entitlements */,
 				09E95CD81DB222A300A798FD /* AppDelegate.swift */,
 				09E95CDA1DB222A300A798FD /* MasterViewController.swift */,
+				09E95D0C1DB2321D00A798FD /* Workout.swift */,
 				09E95CDC1DB222A300A798FD /* DetailViewController.swift */,
 				09E95CDE1DB222A300A798FD /* Main.storyboard */,
 				09E95CE11DB222A300A798FD /* Assets.xcassets */,
@@ -121,6 +127,7 @@
 			children = (
 				09E95CEF1DB222A300A798FD /* Workout_ExtractorTests.swift */,
 				09E95CF11DB222A300A798FD /* Info.plist */,
+				09E95D0F1DB2336600A798FD /* WorkoutTest.swift */,
 			);
 			path = "Workout ExtractorTests";
 			sourceTree = "<group>";
@@ -287,6 +294,7 @@
 				09E95CDD1DB222A300A798FD /* DetailViewController.swift in Sources */,
 				09E95CDB1DB222A300A798FD /* MasterViewController.swift in Sources */,
 				09E95CD91DB222A300A798FD /* AppDelegate.swift in Sources */,
+				09E95D0D1DB2321D00A798FD /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +303,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E95CF01DB222A300A798FD /* Workout_ExtractorTests.swift in Sources */,
+				09E95D0E1DB2321D00A798FD /* Workout.swift in Sources */,
+				09E95D101DB2336600A798FD /* WorkoutTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

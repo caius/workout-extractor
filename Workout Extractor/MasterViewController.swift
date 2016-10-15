@@ -14,7 +14,7 @@ class MasterViewController: UITableViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     var detailViewController: DetailViewController? = nil
-    var workouts = [HKWorkout]()
+    var workouts = [Workout]()
 
 
     override func viewDidLoad() {
@@ -59,7 +59,7 @@ class MasterViewController: UITableViewController {
                 self.workouts.removeAll()
                 
                 for healthWorkout in samples {
-                    self.workouts.append(healthWorkout)
+                    self.workouts.append(Workout(workout: healthWorkout))
                 }
                 
                 self.tableView.reloadData()
@@ -83,7 +83,7 @@ class MasterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         let object = workouts[indexPath.row]
-        cell.textLabel!.text = object.description
+        cell.textLabel!.text = object.description()
         return cell
     }
 
