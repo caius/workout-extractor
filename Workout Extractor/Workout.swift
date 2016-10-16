@@ -18,8 +18,13 @@ class Workout {
     func description() -> String {
         switch workout.workoutActivityType {
         case HKWorkoutActivityType.cycling:
-            //      let length = HKUnit.lengthFormatterUnit(from: workout.totalDistance!)
             return "Cycle - \(workout.totalDistance!.description)"
+        case HKWorkoutActivityType.running:
+            return "Run - \(workout.totalDistance!.description)"
+        case HKWorkoutActivityType.swimming:
+            return "Swim - \(workout.totalDistance!.description)"
+        case HKWorkoutActivityType.walking:
+            return "Walk - \(workout.totalDistance!.description)"
         default:
             return "Unknown workout type"
         }

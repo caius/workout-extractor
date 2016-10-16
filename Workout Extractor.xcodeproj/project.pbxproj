@@ -13,7 +13,6 @@
 		09E95CE01DB222A300A798FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E95CDE1DB222A300A798FD /* Main.storyboard */; };
 		09E95CE21DB222A300A798FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E95CE11DB222A300A798FD /* Assets.xcassets */; };
 		09E95CE51DB222A300A798FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E95CE31DB222A300A798FD /* LaunchScreen.storyboard */; };
-		09E95CF01DB222A300A798FD /* Workout_ExtractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E95CEF1DB222A300A798FD /* Workout_ExtractorTests.swift */; };
 		09E95CFB1DB222A300A798FD /* Workout_ExtractorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E95CFA1DB222A300A798FD /* Workout_ExtractorUITests.swift */; };
 		09E95D0B1DB222E700A798FD /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E95D0A1DB222E700A798FD /* HealthKit.framework */; };
 		09E95D0D1DB2321D00A798FD /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E95D0C1DB2321D00A798FD /* Workout.swift */; };
@@ -48,7 +47,6 @@
 		09E95CE41DB222A300A798FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09E95CE61DB222A300A798FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E95CEB1DB222A300A798FD /* Workout ExtractorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Workout ExtractorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		09E95CEF1DB222A300A798FD /* Workout_ExtractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout_ExtractorTests.swift; sourceTree = "<group>"; };
 		09E95CF11DB222A300A798FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E95CF61DB222A300A798FD /* Workout ExtractorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Workout ExtractorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E95CFA1DB222A300A798FD /* Workout_ExtractorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout_ExtractorUITests.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 		09E95CEE1DB222A300A798FD /* Workout ExtractorTests */ = {
 			isa = PBXGroup;
 			children = (
-				09E95CEF1DB222A300A798FD /* Workout_ExtractorTests.swift */,
 				09E95CF11DB222A300A798FD /* Info.plist */,
 				09E95D0F1DB2336600A798FD /* WorkoutTest.swift */,
 			);
@@ -302,7 +299,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E95CF01DB222A300A798FD /* Workout_ExtractorTests.swift in Sources */,
 				09E95D0E1DB2321D00A798FD /* Workout.swift in Sources */,
 				09E95D101DB2336600A798FD /* WorkoutTest.swift in Sources */,
 			);
