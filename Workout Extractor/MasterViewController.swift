@@ -11,7 +11,7 @@ import HealthKit
 
 class MasterViewController: UITableViewController {
 
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate // tailor:disable
 
     var detailViewController: DetailViewController? = nil
     var workouts = [Workout]()
