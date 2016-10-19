@@ -48,6 +48,5 @@ class DetailViewController: UIViewController {
     func exportWorkout(_ sender: Any) {
         print("Exporting workout \(self.detailItem!.description())")
     }
-    
-}
 
+}

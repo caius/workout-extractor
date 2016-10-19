@@ -47,28 +47,28 @@ class MasterViewController: UITableViewController {
     }
 
     // MARK: - Fetching data
-    
+
     func fetchWorkoutData() {
         let workoutQuery = HKSampleQuery(sampleType: HKWorkoutType.workoutType(), predicate: HKQuery.predicateForWorkouts(with: HKWorkoutActivityType.cycling), limit: 5, sortDescriptors: nil) { (query, samples, error) in
-            
+
             guard let samples = samples as? [HKWorkout] else {
                 fatalError("Error occured trying to grab workouts. The error was: \(error?.localizedDescription)")
             }
-            
+
             DispatchQueue.main.sync(execute: {
                 self.workouts.removeAll()
-                
+
                 for healthWorkout in samples {
                     self.workouts.append(Workout(workout: healthWorkout))
                 }
-                
+
                 self.tableView.reloadData()
             })
         }
-        
+
         appDelegate.healthstore!.execute(workoutQuery)
     }
-    
+
     // MARK: - Table View
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -103,4 +103,3 @@ class MasterViewController: UITableViewController {
 
 
 }
-

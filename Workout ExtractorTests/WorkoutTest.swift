@@ -10,6 +10,7 @@ import XCTest
 @testable import HealthKit
 
 class WorkoutTest: XCTestCase {
+
     override func setUp() {
         super.setUp()
     }
@@ -32,19 +33,19 @@ class WorkoutTest: XCTestCase {
 
     func testDescriptionRunning() {
         let workout = Workout(workout: hkworkoutFor(activityType: HKWorkoutActivityType.running))
-        
+
         XCTAssertEqual(workout.description(), "Run - 3.2 km")
     }
 
     func testDescriptionSwimming() {
         let workout = Workout(workout: hkworkoutFor(activityType: HKWorkoutActivityType.swimming))
-        
+
         XCTAssertEqual(workout.description(), "Swim - 3.2 km")
     }
 
     func testDescriptionWalking() {
         let workout = Workout(workout: hkworkoutFor(activityType: HKWorkoutActivityType.walking))
-        
+
         XCTAssertEqual(workout.description(), "Walk - 3.2 km")
     }
 
@@ -57,4 +58,5 @@ class WorkoutTest: XCTestCase {
 
         return HKWorkout(activityType: activityType, start: start, end: end, duration: duration, totalEnergyBurned: energyBurned, totalDistance: distance, metadata: nil)
     }
+
 }

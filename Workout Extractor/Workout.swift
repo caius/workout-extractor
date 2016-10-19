@@ -10,11 +10,11 @@ import HealthKit
 
 class Workout {
     var workout: HKWorkout
-    
+
     init(workout: HKWorkout) {
         self.workout = workout
     }
-    
+
     func description() -> String {
         switch workout.workoutActivityType {
         case HKWorkoutActivityType.cycling:
@@ -29,4 +29,5 @@ class Workout {
             return "Unknown workout type"
         }
     }
+
 }
