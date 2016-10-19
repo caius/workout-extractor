@@ -22,7 +22,7 @@ class DetailViewController: UIViewController {
             }
         }
 
-        let exportButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(exportWorkout(_:)))
+        let exportButton = UIBarButtonItem(title: "Export", style: UIBarButtonItemStyle.plain, target: self, action: #selector(exportWorkout(_:)))
         self.navigationItem.rightBarButtonItem = exportButton
 
     }
