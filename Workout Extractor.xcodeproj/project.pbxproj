@@ -156,6 +156,7 @@
 				09E95CD11DB222A300A798FD /* Sources */,
 				09E95CD21DB222A300A798FD /* Frameworks */,
 				09E95CD31DB222A300A798FD /* Resources */,
+				2CBB281CB1C51432F026EC95 /* Tailor */,
 			);
 			buildRules = (
 			);
@@ -282,6 +283,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CBB281CB1C51432F026EC95 /* Tailor */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Tailor;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if hash tailor 2>/dev/null; then\n  tailor\nelse\n  echo \"warning: Please install Tailor from https://tailor.sh\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		09E95CD11DB222A300A798FD /* Sources */ = {
@@ -543,6 +561,7 @@
 				09E95D011DB222A300A798FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09E95D021DB222A300A798FD /* Build configuration list for PBXNativeTarget "Workout ExtractorTests" */ = {
 			isa = XCConfigurationList;
@@ -551,6 +570,7 @@
 				09E95D041DB222A300A798FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09E95D051DB222A300A798FD /* Build configuration list for PBXNativeTarget "Workout ExtractorUITests" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +579,7 @@
 				09E95D071DB222A300A798FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
