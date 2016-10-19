@@ -21,6 +21,10 @@ class DetailViewController: UIViewController {
                 label.text = detail.description()
             }
         }
+
+        let exportButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(exportWorkout(_:)))
+        self.navigationItem.rightBarButtonItem = exportButton
+
     }
 
     override func viewDidLoad() {
@@ -41,6 +45,9 @@ class DetailViewController: UIViewController {
         }
     }
 
-
+    func exportWorkout(_ sender: Any) {
+        print("Exporting workout \(self.detailItem!.description())")
+    }
+    
 }
 
