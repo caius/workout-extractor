@@ -11,11 +11,10 @@ import HealthKit
 
 class MasterViewController: UITableViewController {
 
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate // tailor:disable
+    let healthstore = Healthstore.healthstore
 
     var detailViewController: DetailViewController? = nil
     var workouts = [Workout]()
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +48,9 @@ class MasterViewController: UITableViewController {
     // MARK: - Fetching data
 
     func fetchWorkoutData() {
-        let workoutQuery = HKSampleQuery(sampleType: HKWorkoutType.workoutType(), predicate: HKQuery.predicateForWorkouts(with: HKWorkoutActivityType.cycling), limit: 5, sortDescriptors: nil) { (query, samples, error) in
+        let filter: NSPredicate? = nil
+        // let filter = HKQuery.predicateForWorkouts(with: HKWorkoutActivityType.cycling)
+        let workoutQuery = HKSampleQuery(sampleType: HKWorkoutType.workoutType(), predicate: filter, limit: 15, sortDescriptors: nil) { (query, samples, error) in
 
             guard let samples = samples as? [HKWorkout] else {
                 fatalError("Error occured trying to grab workouts. The error was: \(error?.localizedDescription)")
@@ -59,14 +60,21 @@ class MasterViewController: UITableViewController {
                 self.workouts.removeAll()
 
                 for healthWorkout in samples {
+                    print("\(healthWorkout)")
                     self.workouts.append(Workout(workout: healthWorkout))
+                    if healthWorkout.device != nil {
+                        print("device \(healthWorkout.device!)")
+                    }
                 }
 
                 self.tableView.reloadData()
             })
         }
 
-        appDelegate.healthstore!.execute(workoutQuery)
+        self.healthstore.call { (store) in
+            print("Fetching query from store")
+            store.execute(workoutQuery)
+        }
     }
 
     // MARK: - Table View

@@ -13,7 +13,6 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
@@ -47,6 +46,9 @@ class DetailViewController: UIViewController {
 
     func exportWorkout(_ sender: Any) {
         print("Exporting workout \(self.detailItem!.description())")
+
+//        let exporter = WorkoutExporter(store: appDelegate.healthstore!, workout: detailItem!.workout)
+//        exporter.export()
     }
 
 }

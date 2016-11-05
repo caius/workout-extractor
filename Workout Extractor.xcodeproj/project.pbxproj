@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0957471D1DCDDF0700DA674F /* WorkoutExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0957471C1DCDDF0700DA674F /* WorkoutExporter.swift */; };
+		0957471E1DCDDF0700DA674F /* WorkoutExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0957471C1DCDDF0700DA674F /* WorkoutExporter.swift */; };
+		09C97CB81DCE8DB900DD2837 /* Healthstore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C97CB71DCE8DB900DD2837 /* Healthstore.swift */; };
+		09C97CB91DCE8DB900DD2837 /* Healthstore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C97CB71DCE8DB900DD2837 /* Healthstore.swift */; };
 		09E95CD91DB222A300A798FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E95CD81DB222A300A798FD /* AppDelegate.swift */; };
 		09E95CDB1DB222A300A798FD /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E95CDA1DB222A300A798FD /* MasterViewController.swift */; };
 		09E95CDD1DB222A300A798FD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E95CDC1DB222A300A798FD /* DetailViewController.swift */; };
@@ -38,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0957471C1DCDDF0700DA674F /* WorkoutExporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutExporter.swift; sourceTree = "<group>"; };
+		09C97CB71DCE8DB900DD2837 /* Healthstore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Healthstore.swift; sourceTree = "<group>"; };
 		09E95CD51DB222A300A798FD /* Workout Extractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Workout Extractor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E95CD81DB222A300A798FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09E95CDA1DB222A300A798FD /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -110,8 +116,10 @@
 				09E95D081DB222E700A798FD /* Workout Extractor.entitlements */,
 				09E95CD81DB222A300A798FD /* AppDelegate.swift */,
 				09E95CDA1DB222A300A798FD /* MasterViewController.swift */,
+				09C97CB71DCE8DB900DD2837 /* Healthstore.swift */,
 				09E95D0C1DB2321D00A798FD /* Workout.swift */,
 				09E95CDC1DB222A300A798FD /* DetailViewController.swift */,
+				0957471C1DCDDF0700DA674F /* WorkoutExporter.swift */,
 				09E95CDE1DB222A300A798FD /* Main.storyboard */,
 				09E95CE11DB222A300A798FD /* Assets.xcassets */,
 				09E95CE31DB222A300A798FD /* LaunchScreen.storyboard */,
@@ -306,8 +314,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0957471D1DCDDF0700DA674F /* WorkoutExporter.swift in Sources */,
 				09E95CDD1DB222A300A798FD /* DetailViewController.swift in Sources */,
 				09E95CDB1DB222A300A798FD /* MasterViewController.swift in Sources */,
+				09C97CB81DCE8DB900DD2837 /* Healthstore.swift in Sources */,
 				09E95CD91DB222A300A798FD /* AppDelegate.swift in Sources */,
 				09E95D0D1DB2321D00A798FD /* Workout.swift in Sources */,
 			);
@@ -319,6 +329,8 @@
 			files = (
 				09E95D0E1DB2321D00A798FD /* Workout.swift in Sources */,
 				09E95D101DB2336600A798FD /* WorkoutTest.swift in Sources */,
+				0957471E1DCDDF0700DA674F /* WorkoutExporter.swift in Sources */,
+				09C97CB91DCE8DB900DD2837 /* Healthstore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

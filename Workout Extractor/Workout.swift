@@ -16,6 +16,8 @@ class Workout {
     }
 
     func description() -> String {
+        return "Workout"
+/*
         switch workout.workoutActivityType {
         case HKWorkoutActivityType.cycling:
             return "Cycle - \(workout.totalDistance!.description)"
@@ -28,6 +30,7 @@ class Workout {
         default:
             return "Unknown workout type"
         }
+ */
     }
 
 }

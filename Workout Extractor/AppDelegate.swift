@@ -13,38 +13,15 @@ import HealthKit
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
-    var healthstore: HKHealthStore?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-        setupHealthkit {
-            // Override point for customization after application launch.
-            let splitViewController = self.window!.rootViewController as! UISplitViewController // tailor:disable
-            let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController // tailor:disable
-            navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
-            splitViewController.delegate = self
-        }
+        // Override point for customization after application launch.
+        let splitViewController = self.window!.rootViewController as! UISplitViewController // tailor:disable
+        let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController // tailor:disable
+        navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+        splitViewController.delegate = self
 
         return true
-    }
-
-    func setupHealthkit(callback: @escaping () -> Void) {
-        guard self.healthstore == nil else {
-            return
-        }
-
-        let store = HKHealthStore()
-        let writeableTypes: Set<HKSampleType>? = []
-        let readableTypes: Set<HKSampleType>? = [HKWorkoutType.workoutType()]
-
-        store.requestAuthorization(toShare: writeableTypes, read: readableTypes) { (result, error) in
-            if error != nil {
-                fatalError("Error requesting healthkit auth: \(error?.localizedDescription)")
-            }
-
-            self.healthstore = store
-            callback()
-        }
     }
 
     // MARK: - Split view
