@@ -50,7 +50,8 @@ class MasterViewController: UITableViewController {
     func fetchWorkoutData() {
         let filter: NSPredicate? = nil
         // let filter = HKQuery.predicateForWorkouts(with: HKWorkoutActivityType.cycling)
-        let workoutQuery = HKSampleQuery(sampleType: HKWorkoutType.workoutType(), predicate: filter, limit: 15, sortDescriptors: nil) { (query, samples, error) in
+        let sorting = [NSSortDescriptor(key: "startDate", ascending: false)]
+        let workoutQuery = HKSampleQuery(sampleType: HKWorkoutType.workoutType(), predicate: filter, limit: 250, sortDescriptors: sorting) { (query, samples, error) in
 
             guard let samples = samples as? [HKWorkout] else {
                 fatalError("Error occured trying to grab workouts. The error was: \(error?.localizedDescription)")
@@ -60,19 +61,18 @@ class MasterViewController: UITableViewController {
                 self.workouts.removeAll()
 
                 for healthWorkout in samples {
-                    print("\(healthWorkout)")
-                    self.workouts.append(Workout(workout: healthWorkout))
-                    if healthWorkout.device != nil {
-                        print("device \(healthWorkout.device!)")
+                    if healthWorkout.sourceRevision.source.bundleIdentifier != "com.strava.stravaride" {
+                        self.workouts.append(Workout(workout: healthWorkout))
                     }
                 }
+
+                print("Found \(self.workouts.count) workouts")
 
                 self.tableView.reloadData()
             })
         }
 
         self.healthstore.call { (store) in
-            print("Fetching query from store")
             store.execute(workoutQuery)
         }
     }

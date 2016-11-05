@@ -22,7 +22,7 @@ class Healthstore {
 
         let store = HKHealthStore()
         let writeableTypes: Set<HKSampleType>? = []
-        let readableTypes: Set<HKSampleType>? = [HKWorkoutType.workoutType()]
+        let readableTypes: Set<HKSampleType>? = [HKWorkoutType.workoutType(), HKSampleType.quantityType(forIdentifier: .distanceWalkingRunning)!]
 
         print("Healthstore about to request auth")
 

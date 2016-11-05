@@ -21,6 +21,24 @@ class WorkoutExporter {
 
     func export() {
         print("Exporting workout \(workout)")
+
+        print("Workout events: \(workout.workoutEvents)")
+
+
+        let filter = HKQuery.predicateForObjects(from: workout)
+        let sorting = [NSSortDescriptor(key: "startDate", ascending: true)]
+        let workoutQuery = HKSampleQuery(sampleType: HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)!, predicate: filter, limit: 1024, sortDescriptors: sorting) { (query, samples, error) in
+
+            print("\(samples)")
+            print("Got \(samples!.count) samples")
+
+            for s in samples! {
+                print("\(s)")
+            }
+
+        }
+
+        store.execute(workoutQuery)
     }
 
 }
