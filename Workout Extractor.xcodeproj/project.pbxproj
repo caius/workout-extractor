@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -99,6 +99,7 @@
 				09E95D091DB222E700A798FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		09E95CD61DB222A300A798FD /* Products */ = {
 			isa = PBXGroup;
@@ -246,7 +247,7 @@
 				};
 			};
 			buildConfigurationList = 09E95CD01DB222A300A798FD /* Build configuration list for PBXProject "Workout Extractor" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
