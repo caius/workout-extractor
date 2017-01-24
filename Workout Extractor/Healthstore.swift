@@ -22,7 +22,7 @@ class Healthstore {
 
         let store = HKHealthStore()
         let writeableTypes: Set<HKSampleType>? = []
-        let readableTypes: Set<HKSampleType>? = [HKWorkoutType.workoutType(), HKSampleType.quantityType(forIdentifier: .distanceWalkingRunning)!]
+        let readableTypes: Set<HKSampleType>? = [HKWorkoutType.workoutType(), HKSampleType.quantityType(forIdentifier: .distanceWalkingRunning)!, HKSampleType.quantityType(forIdentifier: .heartRate)!]
 
         print("Healthstore about to request auth")
 
@@ -38,6 +38,7 @@ class Healthstore {
 
     func call(block: (HKHealthStore) -> Void) {
         print("Healthstore.call")
+        // FIXME: we blow up here if we're requesting permissions - need to handle that asynchronously
         guard self._store != nil else {
             fatalError("Store not initialized yet Healthstore.call called")
         }
